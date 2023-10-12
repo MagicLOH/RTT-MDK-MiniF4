@@ -1,0 +1,15 @@
+import os
+import rtconfig
+from building import *
+
+cwd = GetCurrentDir()
+CPPPATH = [cwd]
+src = []
+
+if GetDepend(['BSP_USING_FAL']):
+    src += Glob('fal_spi_flash_sfud_port.c')
+
+group = DefineGroup('ports', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')
+

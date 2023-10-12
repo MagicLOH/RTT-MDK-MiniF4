@@ -1,0 +1,29 @@
+import os
+import rtconfig
+from building import *
+
+Import('SDK_LIB')
+
+cwd = GetCurrentDir()
+
+# add general drivers
+src = []
+path = [cwd]
+
+src += Glob('*.c')
+src += Glob('*.cpp')
+
+if GetDepend(['BSP_USING_SPI_FLASH']):
+    src += Glob('spi_flash_w25q64/*.c')
+    path += [cwd + '/spi_flash_w25q64']
+
+
+CPPDEFINES = ['STM32F411xE']
+group = DefineGroup('BoardDrivers', src, depend = [''], CPPPATH = path, CPPDEFINES = CPPDEFINES)
+
+list = os.listdir(cwd)
+for item in list:
+    if os.path.isfile(os.path.join(cwd, item, 'SConscript')):
+        group = group + SConscript(os.path.join(item, 'SConscript'))
+
+Return('group')
