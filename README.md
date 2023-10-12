@@ -18,7 +18,7 @@ STM32F411 BlackPill 是 WeAct 推出的一款基于 ARM Cortex-M4 内核的开�
 
 开发板外观如下图所示：
 
-<img src="docs/figures/board.png" alt="board" style="zoom:75%;" />
+<img src="/docs/figures/board.png" alt="board" style="zoom:75%;" />
 
 该开发板常用 **板载资源** 如下：
 
@@ -29,7 +29,7 @@ STM32F411 BlackPill 是 WeAct 推出的一款基于 ARM Cortex-M4 内核的开�
 - 常用接口：USB 支持 3 种不同接口：虚拟 COM 端口、大容量存储和调试端口
 - 调试接口: SWD
 
-开发板更多详细信息请参考[STM32F4x1 MiniF4 WeAct](https://github.com/WeActTC/MiniF4-STM32F4x1)
+开发板更多详细信息请参考[STM32F4x1 MiniF4 WeAct](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1)
 
 ## 外设支持
 
@@ -60,7 +60,7 @@ STM32F411 BlackPill 是 WeAct 推出的一款基于 ARM Cortex-M4 内核的开�
 
 ### 快速上手
 
-本 BSP 为开发者提供 MDK5 和 IAR 工程，并且支持 GCC 开发环境。下面以 MDK5 开发环境为例，介绍如何将系统运行起来。
+本 BSP 为开发者提供 MDK5 工程，并且支持 GCC 开发环境。下面以 MDK5 开发环境为例，介绍如何将系统运行起来。
 
 #### 硬件连接
 
@@ -70,11 +70,11 @@ STM32F411 BlackPill 是 WeAct 推出的一款基于 ARM Cortex-M4 内核的开�
 
 双击 project.uvprojx 文件，打开 MDK5 工程，编译并下载程序到开发板。
 
-> 工程默认配置使用 ST-LINK 下载程序，点击下载按钮即可下载程序到开发板。
+> 工程默认配置使用 DAP-LINK 下载程序，点击下载按钮即可下载程序到开发板。
 
 #### 运行结果
 
-下载程序成功之后，系统会自动运行，观察开发板上 LED 的运行效果，红色 LD2 常亮、绿色 LD1 会周期性闪烁。
+下载程序成功之后，系统会自动运行，观察开发板上 LED 的运行效果，红色 LD2 常亮、蓝色 LD1 会周期性闪烁。
 
 COM 端口默认连接串口 1，在终端工具里打开相应的串口（115200-8-1-N），复位设备后，可以看到 RT-Thread 的输出信息:
 
@@ -98,7 +98,7 @@ msh >
 
 4. 输入 `scons --target=mdk4/mdk5/iar` 命令重新生成工程。
 
-本章节更多详细的介绍请参考 [STM32 系列 BSP 外设驱动使用教程](../docs/STM32 系列 BSP 外设驱动使用教程. md)。
+本章节更多详细的介绍请参考 [STM32 系列 BSP 外设驱动使用教程](docs/STM32系列BSP制作教程. md)。
 
 ## 注意事项
 
