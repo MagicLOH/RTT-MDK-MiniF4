@@ -4,7 +4,9 @@ import os
 cwd = GetCurrentDir()
 CPPPATH = [cwd]
 src = Glob('*.c')
-#src += Glob('*.cpp')
+
+if GetDepend(['RT_USING_CPLUSPLUS']):
+	src += Glob('*.cpp')
 
 group = DefineGroup('hal', src, depend = [''], CPPPATH = CPPPATH)
 
