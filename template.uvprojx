@@ -379,18 +379,6 @@
           </LDads>
         </TargetArmAds>
       </TargetOption>
-      <Groups>
-        <Group>
-          <GroupName>hal</GroupName>
-          <Files>
-            <File>
-              <FileName>hal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hal\hal.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-      </Groups>
     </Target>
   </Targets>
 

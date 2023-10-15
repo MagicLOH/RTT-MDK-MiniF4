@@ -76,14 +76,6 @@
 
 /* DFS: device virtual file system */
 
-#define RT_USING_DFS
-#define DFS_USING_POSIX
-#define DFS_USING_WORKDIR
-#define DFS_FD_MAX 16
-#define RT_USING_DFS_V1
-#define DFS_FILESYSTEMS_MAX 4
-#define DFS_FILESYSTEM_TYPES_MAX 4
-#define RT_USING_DFS_DEVFS
 #define RT_USING_FAL
 #define FAL_DEBUG_CONFIG
 #define FAL_DEBUG 1
@@ -124,13 +116,6 @@
 
 /* POSIX (Portable Operating System Interface) layer */
 
-#define RT_USING_POSIX_FS
-#define RT_USING_POSIX_DEVIO
-#define RT_USING_POSIX_STDIO
-#define RT_USING_POSIX_DELAY
-#define RT_USING_POSIX_CLOCK
-#define RT_USING_PTHREADS
-#define PTHREAD_NUM_MAX 8
 
 /* Interprocess Communication (IPC) */
 
@@ -138,7 +123,6 @@
 /* Socket is in the 'Network' category */
 
 #define RT_USING_CPLUSPLUS
-#define RT_USING_CPLUSPLUS11
 
 /* Network */
 

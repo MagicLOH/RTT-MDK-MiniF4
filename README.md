@@ -70,7 +70,7 @@ STM32F411 BlackPill 是 WeAct 推出的一款基于 ARM Cortex-M4 内核的开�
 
 双击 project.uvprojx 文件，打开 MDK5 工程，编译并下载程序到开发板。
 
-> 工程默认配置使用 DAP-LINK 下载程序，点击下载按钮即可下载程序到开发板。
+> 工程默认配置使用 ST-LINK 下载程序，点击下载按钮即可下载程序到开发板。
 
 #### 运行结果
 
