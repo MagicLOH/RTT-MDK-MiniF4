@@ -2,7 +2,9 @@
 #define __USER_HAL_H_
 
 /* Includes */
-#include <rtthread.h>
+#include "rtthread.h"
+#include "hal_def.h"
+
 
 /* Typedefs */
 
@@ -16,7 +18,7 @@
 extern "C" {
 #endif
 
-
+void hal_button_init(void);
 
 #ifdef __cplusplus
 }

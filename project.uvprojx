@@ -52,7 +52,7 @@
           <OutputName>rt-thread</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\build\keil\List\</ListingPath>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>__STDC_LIMIT_MACROS, RT_USING_ARMLIBC, USE_HAL_DRIVER, RT_USING_LIBC, __CLK_TCK=RT_TICK_PER_SECOND, __RTTHREAD__, STM32F411xE</Define>
               <Undefine></Undefine>
-              <IncludePath>rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\ktime;rt-thread\components\drivers\include;rt-thread\include;.;board;rt-thread\libcpu\arm\cortex-m4;rt-thread\components\libc\posix\io\poll;rt-thread\components\drivers\include;rt-thread\components\drivers\include;board\CubeMX_Config\Inc;rt-thread\components\libc\compilers\common\extension\fcntl\octal;hal;rt-thread\components\drivers\include;libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;rt-thread\components\libc\compilers\common\include;board\board_drivers\spi_flash_w25q64;rt-thread\components\drivers\ktime\inc;rt-thread\components\drivers\spi\sfud\inc;rt-thread\libcpu\arm\common;rt-thread\components\drivers\include;libraries\HAL_Drivers;board\board_drivers;rt-thread\components\fal\inc;rt-thread\components\libc\posix\io\epoll;applications;rt-thread\components\libc\compilers\common\extension;libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;rt-thread\components\finsh;rt-thread\components\libc\cplusplus;libraries\HAL_Drivers\CMSIS\Include;libraries\HAL_Drivers\drv_flash;board\ports;rt-thread\components\libc\posix\ipc;rt-thread\components\libc\posix\io\eventfd;libraries\HAL_Drivers\config</IncludePath>
+              <IncludePath>rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\include;.;board;rt-thread\libcpu\arm\cortex-m4;rt-thread\components\libc\posix\io\poll;rt-thread\components\drivers\include;rt-thread\components\drivers\include;board\CubeMX_Config\Inc;rt-thread\components\libc\compilers\common\extension\fcntl\octal;hal;libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;rt-thread\components\libc\compilers\common\include;board\board_drivers\spi_flash_w25q64;packages\MultiButton-v1.1.0;rt-thread\components\drivers\spi\sfud\inc;rt-thread\libcpu\arm\common;rt-thread\components\drivers\include;libraries\HAL_Drivers;board\board_drivers;rt-thread\components\fal\inc;rt-thread\components\libc\posix\io\epoll;applications;rt-thread\components\libc\compilers\common\extension;libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;rt-thread\components\finsh;rt-thread\components\libc\posix\ipc;libraries\HAL_Drivers\CMSIS\Include;libraries\HAL_Drivers\config;board\ports;rt-thread\components\libc\posix\io\eventfd;libraries\HAL_Drivers\drv_flash</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -394,14 +394,14 @@
           <GroupName>BoardDrivers</GroupName>
           <Files>
             <File>
-              <FileName>drv_soft_spi_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\board_drivers\spi_flash_w25q64\drv_soft_spi_flash.c</FilePath>
-            </File>
-            <File>
               <FileName>drv_hw_spi_flash.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\board_drivers\spi_flash_w25q64\drv_hw_spi_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_soft_spi_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\board_drivers\spi_flash_w25q64\drv_soft_spi_flash.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -447,21 +447,6 @@
               <FileName>cwchar.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\libc\compilers\common\cwchar.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>CPP</GroupName>
-          <Files>
-            <File>
-              <FileName>cxx_crt.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>rt-thread\components\libc\cplusplus\cxx_crt.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>cxx_crt_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\libc\cplusplus\cxx_crt_init.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1003,62 +988,6 @@
               </FileOption>
             </File>
             <File>
-              <FileName>rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\rtc\rtc.c</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>1</IncludeInBuild>
-                  <AlwaysBuild>0</AlwaysBuild>
-                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
-                  <PublicsOnly>0</PublicsOnly>
-                  <StopOnExitCode>3</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                  <ComprImg>1</ComprImg>
-                </CommonProperty>
-                <FileArmAds>
-                  <Cads>
-                    <interw>2</interw>
-                    <Optim>0</Optim>
-                    <oTime>2</oTime>
-                    <SplitLS>2</SplitLS>
-                    <OneElfS>2</OneElfS>
-                    <Strict>2</Strict>
-                    <EnumInt>2</EnumInt>
-                    <PlainCh>2</PlainCh>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <wLevel>0</wLevel>
-                    <uThumb>2</uThumb>
-                    <uSurpInc>2</uSurpInc>
-                    <uC99>2</uC99>
-                    <uGnu>2</uGnu>
-                    <useXO>2</useXO>
-                    <v6Lang>0</v6Lang>
-                    <v6LangP>0</v6LangP>
-                    <vShortEn>2</vShortEn>
-                    <vShortWch>2</vShortWch>
-                    <v6Lto>2</v6Lto>
-                    <v6WtE>2</v6WtE>
-                    <v6Rtti>2</v6Rtti>
-                    <VariousControls>
-                      <MiscControls>  --c99</MiscControls>
-                      <Define> </Define>
-                      <Undefine> </Undefine>
-                      <IncludePath> </IncludePath>
-                    </VariousControls>
-                  </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>serial.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\serial\serial.c</FilePath>
@@ -1445,19 +1374,19 @@
           <GroupName>Fal</GroupName>
           <Files>
             <File>
-              <FileName>fal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\fal\src\fal_flash.c</FilePath>
-            </File>
-            <File>
               <FileName>fal.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\fal\src\fal.c</FilePath>
             </File>
             <File>
-              <FileName>fal_flash_sfud_port.c</FileName>
+              <FileName>fal_partition.c</FileName>
               <FileType>1</FileType>
-              <FilePath>rt-thread\components\fal\samples\porting\fal_flash_sfud_port.c</FilePath>
+              <FilePath>rt-thread\components\fal\src\fal_partition.c</FilePath>
+            </File>
+            <File>
+              <FileName>fal_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\fal\src\fal_flash.c</FilePath>
             </File>
             <File>
               <FileName>fal_rtt.c</FileName>
@@ -1465,9 +1394,9 @@
               <FilePath>rt-thread\components\fal\src\fal_rtt.c</FilePath>
             </File>
             <File>
-              <FileName>fal_partition.c</FileName>
+              <FileName>fal_flash_sfud_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>rt-thread\components\fal\src\fal_partition.c</FilePath>
+              <FilePath>rt-thread\components\fal\samples\porting\fal_flash_sfud_port.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1503,6 +1432,11 @@
               <FileName>hal.c</FileName>
               <FileType>1</FileType>
               <FilePath>hal\hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>hal_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>hal\hal_button.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1572,37 +1506,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>ktime</GroupName>
-          <Files>
-            <File>
-              <FileName>boottime.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\ktime\src\boottime.c</FilePath>
-            </File>
-            <File>
-              <FileName>cputimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\ktime\src\cputimer.c</FilePath>
-            </File>
-            <File>
-              <FileName>hrtimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\ktime\src\hrtimer.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Libraries</GroupName>
           <Files>
             <File>
               <FileName>stm32f4xx_hal_flash_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_rtc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_qspi.c</FileName>
@@ -1613,11 +1522,6 @@
               <FileName>stm32f4xx_hal_uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_cryp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_rcc_ex.c</FileName>
@@ -1685,9 +1589,9 @@
               <FilePath>libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_rtc.c</FileName>
+              <FileName>stm32f4xx_hal_cryp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c</FilePath>
+              <FilePath>libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cryp.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_flash_ramfunc.c</FileName>
@@ -1713,6 +1617,16 @@
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MultiButton</GroupName>
+          <Files>
+            <File>
+              <FileName>multi_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\MultiButton-v1.1.0\multi_button.c</FilePath>
             </File>
           </Files>
         </Group>
