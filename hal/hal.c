@@ -4,6 +4,7 @@
 #define DBG_LVL	DBG_LOG
 #include "rtdbg.h"
 
+// btn callback events
 void on_button_released(void *btn)
 {
 	RT_UNUSED(btn);
@@ -41,3 +42,5 @@ int hal_init(void)
 	return 0;
 }
 INIT_APP_EXPORT(hal_init);
+
+
