@@ -224,7 +224,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>hal\board_drivers\spi_flash_w25q64\drv_soft_spi_flash.c</PathWithFileName>
+      <PathWithFileName>board\board_drivers\spi_flash_w25q64\drv_soft_spi_flash.c</PathWithFileName>
       <FilenameWithoutPath>drv_soft_spi_flash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -236,7 +236,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>hal\board_drivers\spi_flash_w25q64\drv_hw_spi_flash.c</PathWithFileName>
+      <PathWithFileName>board\board_drivers\spi_flash_w25q64\drv_hw_spi_flash.c</PathWithFileName>
       <FilenameWithoutPath>drv_hw_spi_flash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -764,8 +764,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>rt-thread\components\fal\src\fal_partition.c</PathWithFileName>
-      <FilenameWithoutPath>fal_partition.c</FilenameWithoutPath>
+      <PathWithFileName>rt-thread\components\fal\src\fal_flash.c</PathWithFileName>
+      <FilenameWithoutPath>fal_flash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -776,8 +776,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>rt-thread\components\fal\samples\porting\fal_flash_sfud_port.c</PathWithFileName>
-      <FilenameWithoutPath>fal_flash_sfud_port.c</FilenameWithoutPath>
+      <PathWithFileName>rt-thread\components\fal\src\fal.c</PathWithFileName>
+      <FilenameWithoutPath>fal.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -788,8 +788,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>rt-thread\components\fal\src\fal.c</PathWithFileName>
-      <FilenameWithoutPath>fal.c</FilenameWithoutPath>
+      <PathWithFileName>rt-thread\components\fal\samples\porting\fal_flash_sfud_port.c</PathWithFileName>
+      <FilenameWithoutPath>fal_flash_sfud_port.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -812,8 +812,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>rt-thread\components\fal\src\fal_flash.c</PathWithFileName>
-      <FilenameWithoutPath>fal_flash.c</FilenameWithoutPath>
+      <PathWithFileName>rt-thread\components\fal\src\fal_partition.c</PathWithFileName>
+      <FilenameWithoutPath>fal_partition.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1060,8 +1060,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>rt-thread\components\drivers\ktime\src\hrtimer.c</PathWithFileName>
-      <FilenameWithoutPath>hrtimer.c</FilenameWithoutPath>
+      <PathWithFileName>rt-thread\components\drivers\ktime\src\boottime.c</PathWithFileName>
+      <FilenameWithoutPath>boottime.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1084,8 +1084,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>rt-thread\components\drivers\ktime\src\boottime.c</PathWithFileName>
-      <FilenameWithoutPath>boottime.c</FilenameWithoutPath>
+      <PathWithFileName>rt-thread\components\drivers\ktime\src\hrtimer.c</PathWithFileName>
+      <FilenameWithoutPath>hrtimer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1400,7 +1400,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>hal\ports\fal_spi_flash_sfud_port.c</PathWithFileName>
+      <PathWithFileName>board\ports\fal_spi_flash_sfud_port.c</PathWithFileName>
       <FilenameWithoutPath>fal_spi_flash_sfud_port.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

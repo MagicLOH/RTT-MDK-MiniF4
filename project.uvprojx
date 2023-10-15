@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>__STDC_LIMIT_MACROS, RT_USING_ARMLIBC, USE_HAL_DRIVER, RT_USING_LIBC, __CLK_TCK=RT_TICK_PER_SECOND, __RTTHREAD__, STM32F411xE</Define>
               <Undefine></Undefine>
-              <IncludePath>rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\ktime;rt-thread\components\drivers\include;rt-thread\include;.;board;rt-thread\libcpu\arm\cortex-m4;rt-thread\components\libc\posix\io\poll;rt-thread\components\drivers\include;rt-thread\components\drivers\include;board\CubeMX_Config\Inc;rt-thread\components\libc\compilers\common\extension\fcntl\octal;hal;rt-thread\components\drivers\include;libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;rt-thread\components\libc\compilers\common\include;rt-thread\components\drivers\ktime\inc;rt-thread\components\drivers\spi\sfud\inc;hal\board_drivers\spi_flash_w25q64;rt-thread\libcpu\arm\common;rt-thread\components\drivers\include;libraries\HAL_Drivers;rt-thread\components\fal\inc;rt-thread\components\libc\posix\io\epoll;applications;rt-thread\components\libc\compilers\common\extension;libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;rt-thread\components\finsh;rt-thread\components\libc\cplusplus;libraries\HAL_Drivers\CMSIS\Include;libraries\HAL_Drivers\drv_flash;hal\board_drivers;hal\ports;rt-thread\components\libc\posix\ipc;rt-thread\components\libc\posix\io\eventfd;libraries\HAL_Drivers\config</IncludePath>
+              <IncludePath>rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\ktime;rt-thread\components\drivers\include;rt-thread\include;.;board;rt-thread\libcpu\arm\cortex-m4;rt-thread\components\libc\posix\io\poll;rt-thread\components\drivers\include;rt-thread\components\drivers\include;board\CubeMX_Config\Inc;rt-thread\components\libc\compilers\common\extension\fcntl\octal;hal;rt-thread\components\drivers\include;libraries\STM32F4xx_HAL\CMSIS\Device\ST\STM32F4xx\Include;rt-thread\components\libc\compilers\common\include;board\board_drivers\spi_flash_w25q64;rt-thread\components\drivers\ktime\inc;rt-thread\components\drivers\spi\sfud\inc;rt-thread\libcpu\arm\common;rt-thread\components\drivers\include;libraries\HAL_Drivers;board\board_drivers;rt-thread\components\fal\inc;rt-thread\components\libc\posix\io\epoll;applications;rt-thread\components\libc\compilers\common\extension;libraries\STM32F4xx_HAL\STM32F4xx_HAL_Driver\Inc;rt-thread\components\finsh;rt-thread\components\libc\cplusplus;libraries\HAL_Drivers\CMSIS\Include;libraries\HAL_Drivers\drv_flash;board\ports;rt-thread\components\libc\posix\ipc;rt-thread\components\libc\posix\io\eventfd;libraries\HAL_Drivers\config</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,12 +396,12 @@
             <File>
               <FileName>drv_soft_spi_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>hal\board_drivers\spi_flash_w25q64\drv_soft_spi_flash.c</FilePath>
+              <FilePath>board\board_drivers\spi_flash_w25q64\drv_soft_spi_flash.c</FilePath>
             </File>
             <File>
               <FileName>drv_hw_spi_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>hal\board_drivers\spi_flash_w25q64\drv_hw_spi_flash.c</FilePath>
+              <FilePath>board\board_drivers\spi_flash_w25q64\drv_hw_spi_flash.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1445,14 +1445,9 @@
           <GroupName>Fal</GroupName>
           <Files>
             <File>
-              <FileName>fal_partition.c</FileName>
+              <FileName>fal_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>rt-thread\components\fal\src\fal_partition.c</FilePath>
-            </File>
-            <File>
-              <FileName>fal_flash_sfud_port.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\fal\samples\porting\fal_flash_sfud_port.c</FilePath>
+              <FilePath>rt-thread\components\fal\src\fal_flash.c</FilePath>
             </File>
             <File>
               <FileName>fal.c</FileName>
@@ -1460,14 +1455,19 @@
               <FilePath>rt-thread\components\fal\src\fal.c</FilePath>
             </File>
             <File>
+              <FileName>fal_flash_sfud_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\fal\samples\porting\fal_flash_sfud_port.c</FilePath>
+            </File>
+            <File>
               <FileName>fal_rtt.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\fal\src\fal_rtt.c</FilePath>
             </File>
             <File>
-              <FileName>fal_flash.c</FileName>
+              <FileName>fal_partition.c</FileName>
               <FileType>1</FileType>
-              <FilePath>rt-thread\components\fal\src\fal_flash.c</FilePath>
+              <FilePath>rt-thread\components\fal\src\fal_partition.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1575,9 +1575,9 @@
           <GroupName>ktime</GroupName>
           <Files>
             <File>
-              <FileName>hrtimer.c</FileName>
+              <FileName>boottime.c</FileName>
               <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\ktime\src\hrtimer.c</FilePath>
+              <FilePath>rt-thread\components\drivers\ktime\src\boottime.c</FilePath>
             </File>
             <File>
               <FileName>cputimer.c</FileName>
@@ -1585,9 +1585,9 @@
               <FilePath>rt-thread\components\drivers\ktime\src\cputimer.c</FilePath>
             </File>
             <File>
-              <FileName>boottime.c</FileName>
+              <FileName>hrtimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\ktime\src\boottime.c</FilePath>
+              <FilePath>rt-thread\components\drivers\ktime\src\hrtimer.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1722,7 +1722,7 @@
             <File>
               <FileName>fal_spi_flash_sfud_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>hal\ports\fal_spi_flash_sfud_port.c</FilePath>
+              <FilePath>board\ports\fal_spi_flash_sfud_port.c</FilePath>
             </File>
           </Files>
         </Group>
