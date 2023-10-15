@@ -18,7 +18,7 @@ STM32F411 BlackPill 是 WeAct 推出的一款基于 ARM Cortex-M4 内核的开�
 
 开发板外观如下图所示：
 
-<img src="/docs/figures/board.png" alt="board" style="zoom:75%;" />
+<img src="docs/figures/board.png" alt="board" style="zoom:75%;" />
 
 该开发板常用 **板载资源** 如下：
 
