@@ -1,7 +1,6 @@
 #include "hal_config.h"
 
 #include "rtthread.h"
-
 #define LOG_TAG             "hal.button"
 //#define DBG_LVL DBG_INFO
 #define DBG_LVL    DBG_LOG    // Debug use
@@ -11,7 +10,7 @@
 #ifdef OFFLINE_PKG_USING_MULTIBUTTON
 #include "multi_button.h"
 
-//static uint8_t BTN0 = 0;
+//static const uint8_t BTN0 = 0;
 #define BTN0 (0)
 static uint8_t s_active_level = 0;
 static struct Button s_btnHandler = {0};
