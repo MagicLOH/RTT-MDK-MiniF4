@@ -100,6 +100,37 @@ msh >
 
 本章节更多详细的介绍请参考 [STM32 系列 BSP 外设驱动使用教程](docs/STM32系列BSP制作教程. md)。
 
+##  树状目录结构
+
+``` txt
+.
+|-- config
+|-- docs
+|   |-- datasheet
+|   |-- figures
+|   `-- schematic
+|-- libraries
+|   |-- HAL_Drivers
+|   `-- STM32F4xx_HAL
+|-- offline_pkgs
+|   `-- MultiButton
+|-- rt-thread
+|   |-- components
+|   |-- include
+|   |-- libcpu
+|   |-- src
+|   `-- tools
+`-- stm32f411ceu6
+    |-- DebugConfig
+    |-- applications
+    |-- board
+    |-- build
+    |-- hal
+    `-- packages
+
+23 directories
+```
+
 ## 注意事项
 
 暂无

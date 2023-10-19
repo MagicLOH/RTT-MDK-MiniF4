@@ -1,0 +1,15 @@
+menu "RT-Thread offline packages"
+
+menuconfig OFFLINE_PKG_USING_MULTIBUTTON
+	bool "Enable Multibutton package"
+    default n
+    if OFFLINE_PKG_USING_MULTIBUTTON
+        config MULTIBUTTON_USING_EXAMPLE_CALLBACK
+            bool "Enable async example"
+            default n
+        config MULTIBUTTON_USING_EXAMPLE_POLL
+            bool "Enable inquire example"
+            default n
+    endif
+
+endmenu

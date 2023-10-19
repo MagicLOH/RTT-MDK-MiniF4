@@ -8,16 +8,23 @@
 #include "rtdbg.h"
 
 
-#ifdef PKG_USING_MULTIBUTTON
+#ifdef OFFLINE_PKG_USING_MULTIBUTTON
 #include "multi_button.h"
 
-//static const uint8_t BTN0 = 0;
+//static uint8_t BTN0 = 0;
+#define BTN0 (0)
 static uint8_t s_active_level = 0;
-static struct button s_btnHandler = {0};
+static struct Button s_btnHandler = {0};
 
-static uint8_t pin_level_read(void)
+static uint8_t pin_level_read(uint8_t btn)
 {
-	return (uint8_t)rt_pin_read(CONFIG_BUTTON0_PIN);
+	switch (btn)
+	{
+		case BTN0:
+			return (uint8_t)rt_pin_read(CONFIG_BUTTON0_PIN);
+		default:
+			return 0;
+	}
 }
 
 __weak void on_button_released(void *btn)
@@ -54,7 +61,7 @@ void hal_button_init(void)
 	rt_thread_t tid;
 
 	rt_pin_mode(CONFIG_BUTTON0_PIN, PIN_MODE_INPUT_PULLUP);
-	button_init(&s_btnHandler, pin_level_read, s_active_level);
+	button_init(&s_btnHandler, pin_level_read, s_active_level, BTN0);
 	button_attach(&s_btnHandler, PRESS_UP, on_button_released);
 	button_attach(&s_btnHandler, PRESS_DOWN, on_button_pressed);
 	button_attach(&s_btnHandler, DOUBLE_CLICK, on_button_double_clicked);
@@ -62,7 +69,7 @@ void hal_button_init(void)
 	button_start(&s_btnHandler);
 
 	tid = rt_thread_create("button", btn_thread_entry, NULL,
-						   CONFIG_BTN_THREAD_STACK_SIZE, CONFIG_BTN_THREAD_PRIORITY, 10);
+	                       CONFIG_BTN_THREAD_STACK_SIZE, CONFIG_BTN_THREAD_PRIORITY, 10);
 	RT_ASSERT(tid != RT_NULL);
 	rt_thread_startup(tid);
 }

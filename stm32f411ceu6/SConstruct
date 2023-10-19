@@ -5,7 +5,7 @@ import rtconfig
 if os.path.exists('rt-thread'):
     RTT_ROOT = os.path.normpath(os.getcwd() + '/rt-thread')
 else:
-    RTT_ROOT = os.path.normpath(os.getcwd() + '/../rt-thread-5.0.2')
+    RTT_ROOT = os.path.normpath(os.getcwd() + '/../rt-thread')
 
 sys.path = sys.path + [os.path.join(RTT_ROOT, 'tools')]
 try:
@@ -41,6 +41,11 @@ if os.path.exists(SDK_ROOT + '/libraries'):
 else:
     libraries_path_prefix = os.path.dirname(SDK_ROOT) + '/libraries'
 
+if os.path.exists(SDK_ROOT + '/offline_pkgs'):
+    offline_pkgs_path_prefix = SDK_ROOT + '/offline_pkgs'
+else:
+    offline_pkgs_path_prefix = os.path.normpath(os.getcwd() + '/../offline_pkgs')
+	
 SDK_LIB = libraries_path_prefix
 Export('SDK_LIB')
 
@@ -54,6 +59,8 @@ rtconfig.BSP_LIBRARY_TYPE = stm32_library
 objs.extend(SConscript(os.path.join(libraries_path_prefix, stm32_library, 'SConscript'), variant_dir='build/libraries/'+stm32_library, duplicate=0))
 # include drivers
 objs.extend(SConscript(os.path.join(libraries_path_prefix, 'HAL_Drivers', 'SConscript'),variant_dir='build/libraries/'+'HAL_Drivers', duplicate=0))
+# include offline packages
+objs.extend(SConscript(os.path.join(offline_pkgs_path_prefix, 'SConscript')))
 
 # make a building
 DoBuilding(TARGET, objs)

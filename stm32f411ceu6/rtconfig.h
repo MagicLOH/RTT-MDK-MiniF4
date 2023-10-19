@@ -211,11 +211,6 @@
 
 /* entertainment: terminal games and other interesting software packages */
 
-#define PKG_USING_MULTIBUTTON
-#define PKG_USING_MULTIBUTTON_V110
-
-/* MultiButton Options */
-
 
 /* Arduino libraries */
 
@@ -251,6 +246,9 @@
 
 /* Uncategorized */
 
+/* RT-Thread offline packages */
+
+#define OFFLINE_PKG_USING_MULTIBUTTON
 #define SOC_FAMILY_STM32
 #define SOC_SERIES_STM32F4
 

@@ -8,14 +8,20 @@ config BSP_DIR
 config RTT_DIR
     string
     option env="RTT_ROOT"
-    default "rt-thread"
+    default "../rt-thread"
 
 config PKGS_DIR
     string
     option env="PKGS_ROOT"
     default "packages"
+	
+config OFFLINE_PKGS_DIR
+    string
+    option env="OFFLINE_PKGS_DIR"
+    default "../offline_pkgs"
 
 source "$RTT_DIR/Kconfig"
 source "$PKGS_DIR/Kconfig"
+source "$OFFLINE_PKGS_DIR/Kconfig"
 source "$RTT_DIR/../libraries/Kconfig"
 source "board/Kconfig"

@@ -3,6 +3,7 @@
 
 /* Includes */
 #include "rtthread.h"
+#include "hal_config.h"
 #include "hal_def.h"
 
 
